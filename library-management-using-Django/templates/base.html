@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library-project</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+<body>
+
+    <div class="m-5 mt-5">
+        <h2 class="text-center alert alert-info">Library</h2>
+
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+    {% comment %} <script src="{% static 'js/jquery.js' %}"></script> {% endcomment %}
+    {% comment %} <script src="{% static 'js/popper.js' %}"></script> {% endcomment %}
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

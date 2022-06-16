@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container col-md-6 offset-3">
+  <div class="m-3 mt-3">
+    <h2 class="text-center alert alert-info">Admin SignUp Panel</h2>
+  </div>
+  <form action="" method="post" class="row g-3">
+    {% csrf_token %}
+    <div class="col-md-10 offset-1 ">
+      <label for=" " class="form-label"><strong>Username </strong> </label>
+      <input type="text" name="username" placeholder="Enter Your Username" class="form-control" id="username"
+        required />
+      
+        <label for=" " class="form-label"> <strong>First Name </strong> </label>
+      <input type="text" name="fname" placeholder="Enter Your First Name" class="form-control" id="fname" required />
+      
+      <label for=" " class="form-label"> <strong>Last Name </strong> </label>
+      <input type="text" name="lname" placeholder="Enter Your Last Name" class="form-control" id="lname" required />
+
+      <label for=" " class="form-label"> <strong>Email Address </strong> </label>
+      <input type="email" name="email" placeholder="Enter Your Email Address" class="form-control" id="email"
+        required />
+
+      <label for="inputPassword4" class="form-label"> <strong>Password </strong> </label>
+      <input type="password" name="pass1" placeholder="Enter Your Password" class="form-control" id="pass1" required />
+
+      <label for="inputPassword4" class="form-label"> <strong> Confirm Your Password</strong></label>
+      <input type="password" name="pass2" placeholder="Confirm Your Password" class="form-control" id="pass2"
+        required />
+
+      </div> 
+      <div class="col-md-10 offset-1">
+        <br />
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+        <p> If You Are A <strong>SuperUser</strong> Click On <strong> Sign In.</strong> </p>
+        <a href="{% url 'signin'  %}" class="btn btn-primary"> Sign In</a>
+      </div>
+  </form>
+</div>
+
+{% endblock content %}

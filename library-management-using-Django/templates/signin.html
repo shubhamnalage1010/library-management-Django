@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container col-md-6 offset-3">
+  <div class="m-5 mt-5">
+    <h2 class="text-center alert alert-info">Admin Login Panel</h2>
+  </div>
+  <form class="row g-3" action="" method="post">
+    {% csrf_token %}
+    <div class="col-md-6">
+      <label class="form-label"> <strong> Username</strong> </label>
+      <input type="text" name="username" placeholder="Enter Your Username" class="form-control" id="username" />
+    </div>
+    <div class="col-md-6">
+      <label class="form-label"><strong> Password</strong></label>
+      <input type="password" name="pass1" placeholder="Enter Your Password" class="form-control" id="pass1" />
+    </div>
+    <div class="col-12">
+      <br />
+      <button class="btn btn-primary" type="submit">sign in</button>
+    </div>
+  </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="col-md-10 offset-1">
+    <h4 class="text-center alert alert-info">Student Book Records</h4>
+
+    {% if books %}
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Category</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <th scope="row">{{book.id}}</th>
+                <td>{{book.name | truncatechars:20}}</td>
+                <td>{{book.author | truncatechars:20}}</td>
+                <td>{{book.category | truncatechars:20}}</td>
+                <td>{{book.date }}</td>
+                <td>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+    <h4 class="text-center alert alert-danger">No Records Found!</h4>
+
+    {% endif %}
+</div>
+{% endblock content %}
